@@ -1,0 +1,9 @@
+services:
+    amyboyd_history_listener:
+        class:   AmyBoyd\HistoryBundle\Listener\HistoryListener
+        tags:
+            # A higher priority listener will run first. The history listener should be the
+            # final listener to run, because all changes that other listeners apply must be
+            # known before this one can run.
+            - { name: doctrine_mongodb.odm.event_listener, event: prePersist, priority: -1 }
+            - { name: doctrine_mongodb.odm.event_listener, event: onFlush, priority: -1 }
