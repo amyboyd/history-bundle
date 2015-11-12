@@ -1,0 +1,30 @@
+{
+  "name": "amyboyd/history-bundle",
+  "type": "library",
+  "description": "Symfony bundle for recording document history",
+  "keywords": [
+    "mongodb",
+    "history",
+    "audit",
+    "auditing"
+  ],
+  "homepage": "https://github.com/amyboyd/history-bundle",
+  "authors": [
+    {
+      "name": "Amy Boyd",
+      "email": "amy@amyboyd.co.uk"
+    }
+  ],
+  "autoload": {
+    "psr-0": {
+      "AmyBoyd\\HistoryBundle\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require-dev": {
+    "symfony/http-kernel": ">=2.3.0",
+    "symfony/dependency-injection": ">=2.3.0",
+    "symfony/framework-bundle": ">=2.3.0",
+    "phpunit/phpunit": "^4.8"
+  }
+}
