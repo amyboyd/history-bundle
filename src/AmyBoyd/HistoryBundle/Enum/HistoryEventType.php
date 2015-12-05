@@ -10,7 +10,7 @@ abstract class HistoryEventType
 
     const RECORD_UPDATED = 'AmyBoyd\HistoryBundle\Enum\HistoryEventType::RECORD_UPDATED';
 
-    public function validateValue($value)
+    public static function validateValue($value)
     {
         if ($value !== self::RECORD_CREATED && $value !== self::RECORD_UPDATED) {
             throw new \InvalidArgumentException();
